@@ -44,16 +44,19 @@ html {
   font-weight: bold;
   font-family: sans-serif;
 }
-
 h1 img {
   margin: 5% auto 50px;
   display: block;
 }
-
 p {
   text-align: center;
+  margin: 0 auto;
 }
-
+p.video {
+  width: 560px;
+  height: 315px; 
+  margin: 0 auto;
+}
 a,
 a:active,
 a:hover,
@@ -68,16 +71,22 @@ a:-webkit-any-link:focus-within,
 a:-webkit-any-link:visited {
   color: #AB1923;
 }
+@media only screen and (max-width: 600px) {
+  p.video {
+    width: 260px;
+    height: 15px; 
+  }
+}
 </style>
 </head>
 <body data-useragent class="lang-en responsive " lang="en-US">
-	<header>
-		<h1><img width="200px" src="https://d2ddoduugvun08.cloudfront.net/items/3y1Y3G2f3g0B470J2w19/dirtylook_logo.jpg"/></h1>
-		<p>A band in San Francisco</p>
-		<p><iframe width="560" height="315" src="https://www.youtube.com/embed/OlZSccFX7AE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-		<p>@ <a href="https://www.facebook.com/events/632036117270544/">Milk Bar SF July 24 2019 09:00PM</a> </p>
-	</header>
-	<footer></footer>
-	<script src="dirtylook.js"></script>
+  <header>
+    <h1><img width="200px" src="https://d2ddoduugvun08.cloudfront.net/items/3y1Y3G2f3g0B470J2w19/dirtylook_logo.jpg"/></h1>
+    <p>A band in San Francisco</p>
+    <p class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/OlZSccFX7AE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+    <p>@ <a href="https://www.facebook.com/events/632036117270544/">Milk Bar SF July 24 2019 09:00PM</a> </p>
+  </header>
+  <footer></footer>
+  <script src="dirtylook.js"></script>
 </body>
 </html>
