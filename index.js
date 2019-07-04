@@ -68,6 +68,30 @@ app.get('/follow', function(request, response) {
   response.render('follow.html', { env: envName});
 });
 
+app.get('/robots', function(request, response) {
+  var env = process.env.APP_ENV;
+  if (env == 'staging') {
+    var envName = 'staging'
+  } else if (env == 'production') {
+    var envName = 'production'
+  } else {
+    var envName = 'review app'
+  }
+  response.render('robots.txt', { env: envName});
+});
+
+app.get('/sitemap', function(request, response) {
+  var env = process.env.APP_ENV;
+  if (env == 'staging') {
+    var envName = 'staging'
+  } else if (env == 'production') {
+    var envName = 'production'
+  } else {
+    var envName = 'review app'
+  }
+  response.render('sitemap.xml', { env: envName});
+});
+
 app.listen(app.get('port'), function() {
   console.log("Node app running at localhost:" + app.get('port'));
 });
