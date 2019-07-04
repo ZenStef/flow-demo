@@ -68,12 +68,20 @@ app.get('/follow', function(request, response) {
   response.render('follow.html', { env: envName});
 });
 
-app.use(function(error, request, response, next) {
-  // Do logging and user-friendly error message display
-  console.error(error);
-  // Assuming that template engine is plugged in
-  response.render('error.html');
-})
+app.use(app.router);
+
+app.use(function(req, res, next){
+  res.status(404);
+  if (req.accepts('html')) {
+    res.render('404', { url: req.url });
+    return;
+  }
+  if (req.accepts('json')) {
+    res.send({ error: 'Not found' });
+    return;
+  }
+  res.type('txt').send('Not found');
+});
 
 app.listen(app.get('port'), function() {
   console.log("Node app running at localhost:" + app.get('port'));
