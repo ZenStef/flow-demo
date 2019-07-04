@@ -68,7 +68,7 @@ app.get('/follow', function(request, response) {
   response.render('follow.html', { env: envName});
 });
 
-app.get('/robots', function(request, response) {
+app.get('/robots.txt', function(request, response) {
   var env = process.env.APP_ENV;
   if (env == 'staging') {
     var envName = 'staging'
@@ -80,7 +80,7 @@ app.get('/robots', function(request, response) {
   response.render('robots.txt', { env: envName});
 });
 
-app.get('/sitemap', function(request, response) {
+app.get('/sitemap.xml', function(request, response) {
   var env = process.env.APP_ENV;
   if (env == 'staging') {
     var envName = 'staging'
