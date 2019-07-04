@@ -20,6 +20,30 @@ app.get('/', function(request, response) {
   response.render('index.html', { env: envName});
 });
 
+app.get('/listen', function(request, response) {
+  var env = process.env.APP_ENV;
+  if (env == 'staging') {
+    var envName = 'staging'
+  } else if (env == 'production') {
+    var envName = 'production'
+  } else {
+    var envName = 'review app'
+  }
+  response.render('listen.html', { env: envName});
+});
+
+app.get('/look', function(request, response) {
+  var env = process.env.APP_ENV;
+  if (env == 'staging') {
+    var envName = 'staging'
+  } else if (env == 'production') {
+    var envName = 'production'
+  } else {
+    var envName = 'review app'
+  }
+  response.render('look.html', { env: envName});
+});
+
 app.get('/live', function(request, response) {
   var env = process.env.APP_ENV;
   if (env == 'staging') {
@@ -30,6 +54,18 @@ app.get('/live', function(request, response) {
     var envName = 'review app'
   }
   response.render('live.html', { env: envName});
+});
+
+app.get('/follow', function(request, response) {
+  var env = process.env.APP_ENV;
+  if (env == 'staging') {
+    var envName = 'staging'
+  } else if (env == 'production') {
+    var envName = 'production'
+  } else {
+    var envName = 'review app'
+  }
+  response.render('follow.html', { env: envName});
 });
 
 app.listen(app.get('port'), function() {
