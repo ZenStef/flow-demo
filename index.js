@@ -69,7 +69,15 @@ app.get('/follow', function(request, response) {
 });
 
 app.get('*', function(request, response) {
-  response.status(404).send('what???');
+  var env = process.env.APP_ENV;
+  if (env == 'staging') {
+    var envName = 'staging'
+  } else if (env == 'production') {
+    var envName = 'production'
+  } else {
+    var envName = 'review app'
+  }
+  response.status(404).render('error.html', { env: envName});
 });
 
 app.listen(app.get('port'), function() {
