@@ -68,29 +68,12 @@ app.get('/follow', function(request, response) {
   response.render('follow.html', { env: envName});
 });
 
-app.get('/robots.txt', function(request, response) {
-  var env = process.env.APP_ENV;
-  if (env == 'staging') {
-    var envName = 'staging'
-  } else if (env == 'production') {
-    var envName = 'production'
-  } else {
-    var envName = 'review app'
-  }
-  response.render('robots.txt', { env: envName});
-});
-
-app.get('/sitemap.xml', function(request, response) {
-  var env = process.env.APP_ENV;
-  if (env == 'staging') {
-    var envName = 'staging'
-  } else if (env == 'production') {
-    var envName = 'production'
-  } else {
-    var envName = 'review app'
-  }
-  response.render('sitemap.xml', { env: envName});
-});
+app.use(function(error, request, response, next) {
+  // Do logging and user-friendly error message display
+  console.error(error);
+  // Assuming that template engine is plugged in
+  response.render('error.html');
+})
 
 app.listen(app.get('port'), function() {
   console.log("Node app running at localhost:" + app.get('port'));
