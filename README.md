@@ -7,11 +7,11 @@ dirtylooksucks.com
 San Francisco
 
 ## Band Members
-Stephany Varga - Top Line & Vocals
-Seth Kotowske - Track Writing, Production, & Bass
-Tyler Tigue - Track Writing & Guitar
-Benjamin Burns - Track Writing & Guitar
-Percussion provided by Ethan Kanat and Mike Kelly and occasionally by Benjamin Burns and Colby Earleywine
+Stephany Varga - Top Line & Vocals 
+Seth Kotowske - Track Writing, Production, & Bass 
+Tyler Tigue - Track Writing & Guitar 
+Benjamin Burns - Track Writing & Guitar 
+Percussion provided by Ethan Kanat and Mike Kelly and occasionally by Benjamin Burns and Colby Earleywine 
 
 # Heroku Flow Demo
 
