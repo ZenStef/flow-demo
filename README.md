@@ -1,3 +1,19 @@
+# Dirty Look (SF band) Site
+
+## About
+Dirty Look is an independent bay area rock band. We think you're pretty cool.
+dirtylooksucks.com
+
+## Hometown
+San Francisco
+
+## Band Members
+Stephany Varga - Top Line & Vocals
+Seth Kotowske - Track Writing, Production, & Bass
+Tyler Tigue - Track Writing & Guitar
+Benjamin Burns - Track Writing & Guitar
+Percussion provided by Ethan Kanat and Mike Kelly and occasionally by Benjamin Burns and Colby Earleywine
+
 # Heroku Flow Demo
 
 A barebones Node.js app using [Express 4](http://expressjs.com/).
