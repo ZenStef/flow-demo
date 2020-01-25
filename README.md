@@ -1,6 +1,5 @@
 # Dirty Look (SF band) Site
 
-## About
 Dirty Look is an independent bay area rock band. We think you're pretty cool.
 dirtylooksucks.com
 
