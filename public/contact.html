@@ -56,7 +56,7 @@ h1 {
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: top center;
-  height: 100%;
+  height: 400px;
   margin: 0 auto;
   display: block;
   text-indent: -9999px;
@@ -113,6 +113,19 @@ a.nope {
   -o-animation:      look-a-distraction 2s infinite; /* Opera 12+ */
   animation:         look-a-distraction 2s infinite; /* IE 10+, Fx 29+ */
 }
+p.contents {
+  text-align: center;
+  width: 560px;
+  height: 315px;
+  margin: 0 auto 20px;
+}
+@media only screen and (max-width: 600px) {
+  p.contents {
+    width: 224px;
+    height: 126px; 
+  }
+}
+
 </style>
 </head>
 <body data-useragent class="lang-en responsive " lang="en-US">
@@ -124,12 +137,12 @@ a.nope {
         <li class="pure-menu-item"><a href="/live" class="pure-menu-link link-animate">LIVE</a></li>
     </ul>
   </div>
-  <div>
-  <form name="travel" onsubmit="identify(event)">
-     Reach out to Dirty Look
+  <p class="contents">
+    <form name="travel" onsubmit="identify(event)">
+     Contact Dirty Look
     <input name="destination" required="" size="81" type="text"/> 
     <br><br><br> 
-    For bookings, questions, or shower thoughts. 
+    Bookings, more info, or shower thoughts? 
     <br><br> 
     <textarea cols="81" name="details" required="" rows="10">
     </textarea> 
@@ -139,8 +152,7 @@ a.nope {
     Email: <input name="email" required="" size="75" type="email"/> 
     <br><br>
     <input name="submit" type="submit" value="submit"/>
-  </form> 
-  </div>
+</form> 
   <p>&copy; 2020</p>
   <footer>
     <div class="menu-bottom pure-menu pure-menu-horizontal">
