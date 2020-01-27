@@ -113,14 +113,14 @@ a.nope {
   -o-animation:      look-a-distraction 2s infinite; /* Opera 12+ */
   animation:         look-a-distraction 2s infinite; /* IE 10+, Fx 29+ */
 }
-p.contents {
+form.contents {
   text-align: center;
   width: 560px;
   height: 315px;
   margin: 0 auto 20px;
 }
 @media only screen and (max-width: 600px) {
-  p.contents {
+  form.contents {
     width: 224px;
     height: 126px; 
   }
@@ -137,8 +137,7 @@ p.contents {
         <li class="pure-menu-item"><a href="/live" class="pure-menu-link link-animate">LIVE</a></li>
     </ul>
   </div>
-  <p class="contents">
-    <form name="travel" onsubmit="identify(event)">
+  <form class="contents" name="travel" onsubmit="identify(event)">
      Contact Dirty Look
     <input name="destination" required="" size="81" type="text"/> 
     <br><br><br> 
@@ -152,8 +151,7 @@ p.contents {
     Email: <input name="email" required="" size="75" type="email"/> 
     <br><br>
     <input name="submit" type="submit" value="submit"/>
-    </form> 
-  </p>
+  </form> 
   <p>&copy; 2020</p>
   <footer>
     <div class="menu-bottom pure-menu pure-menu-horizontal">
