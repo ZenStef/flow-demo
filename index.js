@@ -68,6 +68,18 @@ app.get('/follow', function(request, response) {
   response.render('follow.html', { env: envName});
 });
 
+app.get('/contact', function(request, response) {
+  var env = process.env.APP_ENV;
+  if (env == 'staging') {
+    var envName = 'staging'
+  } else if (env == 'production') {
+    var envName = 'production'
+  } else {
+    var envName = 'review app'
+  }
+  response.render('contact.html', { env: envName});
+});
+
 app.get('*', function(request, response) {
   var env = process.env.APP_ENV;
   if (env == 'staging') {
